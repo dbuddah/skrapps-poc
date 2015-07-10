@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ServiceManager.h"
 
-@interface SkrappsServiceManager : NSObject
+@interface SkrappsServiceManager : NSObject <ServiceManager>
 
 @end
