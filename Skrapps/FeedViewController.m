@@ -30,6 +30,7 @@
     serviceManager.loginSuperView = self.view;
     [serviceManager authenticate:^(NSError *error) {
         if (!error) {
+            [self refreshUserFeed];
         }
 
     }];
