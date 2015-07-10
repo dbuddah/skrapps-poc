@@ -88,6 +88,8 @@
 		5B1CFDF31B4F6BDE0021166B /* Skrapps */ = {
 			isa = PBXGroup;
 			children = (
+				5B1CFE1B1B4F83D30021166B /* Models */,
+				5B1CFE1A1B4F83AB0021166B /* ServiceManager */,
 				5B1CFDF81B4F6BDE0021166B /* AppDelegate.h */,
 				5B1CFDF91B4F6BDE0021166B /* AppDelegate.m */,
 				5B1CFDFB1B4F6BDE0021166B /* ViewController.h */,
@@ -124,6 +126,20 @@
 				5B1CFE0F1B4F6BDE0021166B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B1CFE1A1B4F83AB0021166B /* ServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServiceManager;
+			sourceTree = "<group>";
+		};
+		5B1CFE1B1B4F83D30021166B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9FCC6CC8DB71D8733F7C38A5 /* Pods */ = {
