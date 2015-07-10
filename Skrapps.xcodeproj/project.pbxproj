@@ -14,6 +14,7 @@
 		5B1CFE021B4F6BDE0021166B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B1CFE011B4F6BDE0021166B /* Images.xcassets */; };
 		5B1CFE051B4F6BDE0021166B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1CFE031B4F6BDE0021166B /* LaunchScreen.xib */; };
 		5B1CFE111B4F6BDE0021166B /* SkrappsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CFE101B4F6BDE0021166B /* SkrappsTests.m */; };
+		CA5A52B3C490B97ACB27CD9F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFB82629A3966C821661571 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C433BAC98D61957AA59C04E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5B1CFDF11B4F6BDE0021166B /* Skrapps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skrapps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1CFDF51B4F6BDE0021166B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B1CFDF61B4F6BDE0021166B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		5B1CFE0A1B4F6BDE0021166B /* SkrappsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkrappsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1CFE0F1B4F6BDE0021166B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B1CFE101B4F6BDE0021166B /* SkrappsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkrappsTests.m; sourceTree = "<group>"; };
+		9798FE1CF94599CCFA8527DC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CAFB82629A3966C821661571 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5A52B3C490B97ACB27CD9F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,8 @@
 				5B1CFDF31B4F6BDE0021166B /* Skrapps */,
 				5B1CFE0D1B4F6BDE0021166B /* SkrappsTests */,
 				5B1CFDF21B4F6BDE0021166B /* Products */,
+				9FCC6CC8DB71D8733F7C38A5 /* Pods */,
+				A4040B12B371A3E75CC2C886 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +126,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9FCC6CC8DB71D8733F7C38A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9798FE1CF94599CCFA8527DC /* Pods.debug.xcconfig */,
+				3C433BAC98D61957AA59C04E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A4040B12B371A3E75CC2C886 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAFB82629A3966C821661571 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B1CFE141B4F6BDE0021166B /* Build configuration list for PBXNativeTarget "Skrapps" */;
 			buildPhases = (
+				A32A139F6C3B9C149792AB92 /* Check Pods Manifest.lock */,
 				5B1CFDED1B4F6BDD0021166B /* Sources */,
 				5B1CFDEE1B4F6BDD0021166B /* Frameworks */,
 				5B1CFDEF1B4F6BDD0021166B /* Resources */,
+				32089309788F4327EE082C0C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32089309788F4327EE082C0C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A32A139F6C3B9C149792AB92 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B1CFDED1B4F6BDD0021166B /* Sources */ = {
@@ -345,9 +404,11 @@
 		};
 		5B1CFE151B4F6BDE0021166B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9798FE1CF94599CCFA8527DC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Skrapps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -355,9 +416,11 @@
 		};
 		5B1CFE161B4F6BDE0021166B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C433BAC98D61957AA59C04E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Skrapps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +479,7 @@
 				5B1CFE161B4F6BDE0021166B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B1CFE171B4F6BDE0021166B /* Build configuration list for PBXNativeTarget "SkrappsTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +488,7 @@
 				5B1CFE191B4F6BDE0021166B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
