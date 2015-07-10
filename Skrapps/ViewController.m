@@ -7,16 +7,39 @@
 //
 
 #import "ViewController.h"
+#import "InstagramServiceManager.h"
 
-@interface ViewController ()
 
+@interface ViewController () <UIWebViewDelegate>
+{
+    
+}
 @end
 
 @implementation ViewController
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    InstagramServiceManager *serviceManager = [InstagramServiceManager sharedManager];
+    serviceManager.loginSuperView = self.view;
+    [serviceManager authenticate:^(NSError *error) {
+        if (!error) {
+            [serviceManager getFeed:^(NSError *error, id JSON) {
+                if (!error) {
+                    NSLog(@"%@", JSON);
+                }
+                else
+                    NSLog(@"%@", error);
+            }];
+        }
+
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
