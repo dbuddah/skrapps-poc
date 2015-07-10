@@ -16,6 +16,14 @@
 		5B1CFE111B4F6BDE0021166B /* SkrappsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CFE101B4F6BDE0021166B /* SkrappsTests.m */; };
 		5B1CFE1F1B4F88040021166B /* InstagramServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CFE1E1B4F88040021166B /* InstagramServiceManager.m */; };
 		5B1CFE201B4F88040021166B /* InstagramServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CFE1E1B4F88040021166B /* InstagramServiceManager.m */; };
+		5BA607711B503D0D00F5403B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA607701B503D0D00F5403B /* User.m */; };
+		5BA607721B503D0D00F5403B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA607701B503D0D00F5403B /* User.m */; };
+		5BA607751B50409500F5403B /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA607741B50409500F5403B /* Comment.m */; };
+		5BA607761B50409500F5403B /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA607741B50409500F5403B /* Comment.m */; };
+		5BA607791B504DBC00F5403B /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA607781B504DBC00F5403B /* Media.m */; };
+		5BA6077A1B504DBC00F5403B /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA607781B504DBC00F5403B /* Media.m */; };
+		5BA6077D1B506A8100F5403B /* SkrappsServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6077C1B506A8100F5403B /* SkrappsServiceManager.m */; };
+		5BA6077E1B506A8100F5403B /* SkrappsServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6077C1B506A8100F5403B /* SkrappsServiceManager.m */; };
 		CA5A52B3C490B97ACB27CD9F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFB82629A3966C821661571 /* libPods.a */; };
 		E00F6B18EAF05AF7CBD9DF40 /* libPods-Skrapps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA34A25EAF26E021D0BA4A2 /* libPods-Skrapps.a */; };
 /* End PBXBuildFile section */
@@ -48,6 +56,14 @@
 		5B1CFE1C1B4F85A60021166B /* ServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceManager.h; sourceTree = "<group>"; };
 		5B1CFE1D1B4F88040021166B /* InstagramServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramServiceManager.h; sourceTree = "<group>"; };
 		5B1CFE1E1B4F88040021166B /* InstagramServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramServiceManager.m; sourceTree = "<group>"; };
+		5BA6076F1B503D0D00F5403B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		5BA607701B503D0D00F5403B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		5BA607731B50409500F5403B /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		5BA607741B50409500F5403B /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		5BA607771B504DBC00F5403B /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
+		5BA607781B504DBC00F5403B /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
+		5BA6077B1B506A8100F5403B /* SkrappsServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkrappsServiceManager.h; sourceTree = "<group>"; };
+		5BA6077C1B506A8100F5403B /* SkrappsServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkrappsServiceManager.m; sourceTree = "<group>"; };
 		9798FE1CF94599CCFA8527DC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CAFB82629A3966C821661571 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA34A25EAF26E021D0BA4A2 /* libPods-Skrapps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Skrapps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +158,8 @@
 				5B1CFE1C1B4F85A60021166B /* ServiceManager.h */,
 				5B1CFE1D1B4F88040021166B /* InstagramServiceManager.h */,
 				5B1CFE1E1B4F88040021166B /* InstagramServiceManager.m */,
+				5BA6077B1B506A8100F5403B /* SkrappsServiceManager.h */,
+				5BA6077C1B506A8100F5403B /* SkrappsServiceManager.m */,
 			);
 			path = ServiceManager;
 			sourceTree = "<group>";
@@ -149,6 +167,12 @@
 		5B1CFE1B1B4F83D30021166B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5BA6076F1B503D0D00F5403B /* User.h */,
+				5BA607701B503D0D00F5403B /* User.m */,
+				5BA607731B50409500F5403B /* Comment.h */,
+				5BA607741B50409500F5403B /* Comment.m */,
+				5BA607771B504DBC00F5403B /* Media.h */,
+				5BA607781B504DBC00F5403B /* Media.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -306,6 +330,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BA6077D1B506A8100F5403B /* SkrappsServiceManager.m in Sources */,
+				5BA607711B503D0D00F5403B /* User.m in Sources */,
+				5BA607791B504DBC00F5403B /* Media.m in Sources */,
+				5BA607751B50409500F5403B /* Comment.m in Sources */,
 				5B1CFDFD1B4F6BDE0021166B /* ViewController.m in Sources */,
 				5B1CFDFA1B4F6BDE0021166B /* AppDelegate.m in Sources */,
 				5B1CFE1F1B4F88040021166B /* InstagramServiceManager.m in Sources */,
@@ -317,8 +345,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BA6077E1B506A8100F5403B /* SkrappsServiceManager.m in Sources */,
 				5B1CFE201B4F88040021166B /* InstagramServiceManager.m in Sources */,
+				5BA6077A1B504DBC00F5403B /* Media.m in Sources */,
 				5B1CFE111B4F6BDE0021166B /* SkrappsTests.m in Sources */,
+				5BA607721B503D0D00F5403B /* User.m in Sources */,
+				5BA607761B50409500F5403B /* Comment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
