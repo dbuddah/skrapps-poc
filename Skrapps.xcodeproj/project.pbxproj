@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B1CFDF71B4F6BDE0021166B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CFDF61B4F6BDE0021166B /* main.m */; };
 		5B1CFDFA1B4F6BDE0021166B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CFDF91B4F6BDE0021166B /* AppDelegate.m */; };
-		5B1CFDFD1B4F6BDE0021166B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CFDFC1B4F6BDE0021166B /* ViewController.m */; };
+		5B1CFDFD1B4F6BDE0021166B /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CFDFC1B4F6BDE0021166B /* FeedViewController.m */; };
 		5B1CFE001B4F6BDE0021166B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1CFDFE1B4F6BDE0021166B /* Main.storyboard */; };
 		5B1CFE021B4F6BDE0021166B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B1CFE011B4F6BDE0021166B /* Images.xcassets */; };
 		5B1CFE051B4F6BDE0021166B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1CFE031B4F6BDE0021166B /* LaunchScreen.xib */; };
@@ -24,6 +24,8 @@
 		5BA6077A1B504DBC00F5403B /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA607781B504DBC00F5403B /* Media.m */; };
 		5BA6077D1B506A8100F5403B /* SkrappsServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6077C1B506A8100F5403B /* SkrappsServiceManager.m */; };
 		5BA6077E1B506A8100F5403B /* SkrappsServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6077C1B506A8100F5403B /* SkrappsServiceManager.m */; };
+		5BA607821B507B2C00F5403B /* MediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA607811B507B2C00F5403B /* MediaCell.m */; };
+		5BA607831B507B2C00F5403B /* MediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA607811B507B2C00F5403B /* MediaCell.m */; };
 		CA5A52B3C490B97ACB27CD9F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFB82629A3966C821661571 /* libPods.a */; };
 		E00F6B18EAF05AF7CBD9DF40 /* libPods-Skrapps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA34A25EAF26E021D0BA4A2 /* libPods-Skrapps.a */; };
 /* End PBXBuildFile section */
@@ -45,8 +47,8 @@
 		5B1CFDF61B4F6BDE0021166B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B1CFDF81B4F6BDE0021166B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B1CFDF91B4F6BDE0021166B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5B1CFDFB1B4F6BDE0021166B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5B1CFDFC1B4F6BDE0021166B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5B1CFDFB1B4F6BDE0021166B /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		5B1CFDFC1B4F6BDE0021166B /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		5B1CFDFF1B4F6BDE0021166B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B1CFE011B4F6BDE0021166B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5B1CFE041B4F6BDE0021166B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -64,6 +66,8 @@
 		5BA607781B504DBC00F5403B /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
 		5BA6077B1B506A8100F5403B /* SkrappsServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkrappsServiceManager.h; sourceTree = "<group>"; };
 		5BA6077C1B506A8100F5403B /* SkrappsServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkrappsServiceManager.m; sourceTree = "<group>"; };
+		5BA607801B507B2C00F5403B /* MediaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaCell.h; sourceTree = "<group>"; };
+		5BA607811B507B2C00F5403B /* MediaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaCell.m; sourceTree = "<group>"; };
 		9798FE1CF94599CCFA8527DC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CAFB82629A3966C821661571 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA34A25EAF26E021D0BA4A2 /* libPods-Skrapps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Skrapps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,12 +116,13 @@
 		5B1CFDF31B4F6BDE0021166B /* Skrapps */ = {
 			isa = PBXGroup;
 			children = (
+				5BA6077F1B507ABB00F5403B /* Cells */,
 				5B1CFE1B1B4F83D30021166B /* Models */,
 				5B1CFE1A1B4F83AB0021166B /* ServiceManager */,
 				5B1CFDF81B4F6BDE0021166B /* AppDelegate.h */,
 				5B1CFDF91B4F6BDE0021166B /* AppDelegate.m */,
-				5B1CFDFB1B4F6BDE0021166B /* ViewController.h */,
-				5B1CFDFC1B4F6BDE0021166B /* ViewController.m */,
+				5B1CFDFB1B4F6BDE0021166B /* FeedViewController.h */,
+				5B1CFDFC1B4F6BDE0021166B /* FeedViewController.m */,
 				5B1CFDFE1B4F6BDE0021166B /* Main.storyboard */,
 				5B1CFE011B4F6BDE0021166B /* Images.xcassets */,
 				5B1CFE031B4F6BDE0021166B /* LaunchScreen.xib */,
@@ -175,6 +180,15 @@
 				5BA607781B504DBC00F5403B /* Media.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5BA6077F1B507ABB00F5403B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5BA607801B507B2C00F5403B /* MediaCell.h */,
+				5BA607811B507B2C00F5403B /* MediaCell.m */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9FCC6CC8DB71D8733F7C38A5 /* Pods */ = {
@@ -332,9 +346,10 @@
 			files = (
 				5BA6077D1B506A8100F5403B /* SkrappsServiceManager.m in Sources */,
 				5BA607711B503D0D00F5403B /* User.m in Sources */,
+				5BA607821B507B2C00F5403B /* MediaCell.m in Sources */,
 				5BA607791B504DBC00F5403B /* Media.m in Sources */,
 				5BA607751B50409500F5403B /* Comment.m in Sources */,
-				5B1CFDFD1B4F6BDE0021166B /* ViewController.m in Sources */,
+				5B1CFDFD1B4F6BDE0021166B /* FeedViewController.m in Sources */,
 				5B1CFDFA1B4F6BDE0021166B /* AppDelegate.m in Sources */,
 				5B1CFE1F1B4F88040021166B /* InstagramServiceManager.m in Sources */,
 				5B1CFDF71B4F6BDE0021166B /* main.m in Sources */,
@@ -350,6 +365,7 @@
 				5BA6077A1B504DBC00F5403B /* Media.m in Sources */,
 				5B1CFE111B4F6BDE0021166B /* SkrappsTests.m in Sources */,
 				5BA607721B503D0D00F5403B /* User.m in Sources */,
+				5BA607831B507B2C00F5403B /* MediaCell.m in Sources */,
 				5BA607761B50409500F5403B /* Comment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
