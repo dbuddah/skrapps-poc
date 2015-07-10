@@ -14,7 +14,10 @@
 		5B1CFE021B4F6BDE0021166B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B1CFE011B4F6BDE0021166B /* Images.xcassets */; };
 		5B1CFE051B4F6BDE0021166B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1CFE031B4F6BDE0021166B /* LaunchScreen.xib */; };
 		5B1CFE111B4F6BDE0021166B /* SkrappsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CFE101B4F6BDE0021166B /* SkrappsTests.m */; };
+		5B1CFE1F1B4F88040021166B /* InstagramServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CFE1E1B4F88040021166B /* InstagramServiceManager.m */; };
+		5B1CFE201B4F88040021166B /* InstagramServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CFE1E1B4F88040021166B /* InstagramServiceManager.m */; };
 		CA5A52B3C490B97ACB27CD9F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFB82629A3966C821661571 /* libPods.a */; };
+		E00F6B18EAF05AF7CBD9DF40 /* libPods-Skrapps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA34A25EAF26E021D0BA4A2 /* libPods-Skrapps.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +45,12 @@
 		5B1CFE0A1B4F6BDE0021166B /* SkrappsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkrappsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1CFE0F1B4F6BDE0021166B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B1CFE101B4F6BDE0021166B /* SkrappsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkrappsTests.m; sourceTree = "<group>"; };
+		5B1CFE1C1B4F85A60021166B /* ServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceManager.h; sourceTree = "<group>"; };
+		5B1CFE1D1B4F88040021166B /* InstagramServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramServiceManager.h; sourceTree = "<group>"; };
+		5B1CFE1E1B4F88040021166B /* InstagramServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramServiceManager.m; sourceTree = "<group>"; };
 		9798FE1CF94599CCFA8527DC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CAFB82629A3966C821661571 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA34A25EAF26E021D0BA4A2 /* libPods-Skrapps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Skrapps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA5A52B3C490B97ACB27CD9F /* libPods.a in Frameworks */,
+				E00F6B18EAF05AF7CBD9DF40 /* libPods-Skrapps.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +139,9 @@
 		5B1CFE1A1B4F83AB0021166B /* ServiceManager */ = {
 			isa = PBXGroup;
 			children = (
+				5B1CFE1C1B4F85A60021166B /* ServiceManager.h */,
+				5B1CFE1D1B4F88040021166B /* InstagramServiceManager.h */,
+				5B1CFE1E1B4F88040021166B /* InstagramServiceManager.m */,
 			);
 			path = ServiceManager;
 			sourceTree = "<group>";
@@ -155,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				CAFB82629A3966C821661571 /* libPods.a */,
+				CEA34A25EAF26E021D0BA4A2 /* libPods-Skrapps.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -296,6 +308,7 @@
 			files = (
 				5B1CFDFD1B4F6BDE0021166B /* ViewController.m in Sources */,
 				5B1CFDFA1B4F6BDE0021166B /* AppDelegate.m in Sources */,
+				5B1CFE1F1B4F88040021166B /* InstagramServiceManager.m in Sources */,
 				5B1CFDF71B4F6BDE0021166B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B1CFE201B4F88040021166B /* InstagramServiceManager.m in Sources */,
 				5B1CFE111B4F6BDE0021166B /* SkrappsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +458,7 @@
 		};
 		5B1CFE181B4F6BDE0021166B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9798FE1CF94599CCFA8527DC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -463,6 +478,7 @@
 		};
 		5B1CFE191B4F6BDE0021166B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C433BAC98D61957AA59C04E /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
