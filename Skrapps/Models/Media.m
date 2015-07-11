@@ -56,7 +56,7 @@
                            mediaType:MediaTypeImage
                               images:JSON[@"images"]
                                 tags:JSON[@"tags"]
-                            comments:[CommentBuilder buildCommentsFromJSONArray:JSON[@"comments"]]
+                            comments:[CommentBuilder buildCommentsFromJSON:JSON[@"comments"]]
                                likes:@[]
                              caption:JSON[@"caption"][@"text"]
                                 user:[UserBuilder buildUserFromJSON:JSON[@"user"]]

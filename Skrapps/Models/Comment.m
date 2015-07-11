@@ -7,6 +7,7 @@
 //
 
 #import "Comment.h"
+#import "User.h"
 
 @implementation Comment
 
@@ -36,16 +37,18 @@
 +(Comment*)buildCommentFromJSON:(NSDictionary*)JSON
 {
     // TODO: parse real json
-    return [[Comment alloc] initWithText:@"faketext"
-                             createdTime:[NSDate distantPast ]
-                                      ID:@"fakeID"
-                                fromUser:nil];
+    NSString *createdDate = JSON[@"created_time"];
+    return [[Comment alloc] initWithText:JSON[@"text"]
+                             createdTime:[NSDate dateWithTimeIntervalSince1970:createdDate.doubleValue ]
+                                      ID:JSON[@"id"]
+                                fromUser:[UserBuilder buildUserFromJSON:JSON[@"from"]]];
 }
 
-+(NSArray*)buildCommentsFromJSONArray:(NSArray*)JSON
++(NSArray*)buildCommentsFromJSON:(NSDictionary*)JSON
 {
     NSMutableArray *comments = [NSMutableArray new];
-    for (NSDictionary *comment in JSON) {
+    NSLog(@"%@", JSON);
+    for (NSDictionary *comment in JSON[@"data"]) {
         Comment *c = [CommentBuilder buildCommentFromJSON:comment];
         [comments addObject:c];
     }
