@@ -27,7 +27,6 @@
 		5BA607821B507B2C00F5403B /* MediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA607811B507B2C00F5403B /* MediaCell.m */; };
 		5BA607831B507B2C00F5403B /* MediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA607811B507B2C00F5403B /* MediaCell.m */; };
 		CA5A52B3C490B97ACB27CD9F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFB82629A3966C821661571 /* libPods.a */; };
-		E00F6B18EAF05AF7CBD9DF40 /* libPods-Skrapps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA34A25EAF26E021D0BA4A2 /* libPods-Skrapps.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +78,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA5A52B3C490B97ACB27CD9F /* libPods.a in Frameworks */,
-				E00F6B18EAF05AF7CBD9DF40 /* libPods-Skrapps.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
