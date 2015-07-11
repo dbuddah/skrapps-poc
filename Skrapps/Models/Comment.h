@@ -28,6 +28,7 @@
 @interface CommentBuilder : NSObject
 
 +(Comment*)buildCommentFromJSON:(NSDictionary*)JSON;
++(NSArray*)buildCommentsFromJSONArray:(NSArray*)JSON;
 
 @end
 

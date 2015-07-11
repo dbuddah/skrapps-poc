@@ -7,12 +7,15 @@
 //
 
 #import "Media.h"
+#import "Comment.h"
+#import "User.h"
 
 @implementation Media
 
 
 -(instancetype)initWithID: (NSString*)  ID
                 mediaType:(MediaType)  mediaType
+                   images:(NSDictionary*)images
                      tags:(NSArray*)tags
                  comments:(NSArray*)comments
                     likes:(NSArray*)likes
@@ -25,6 +28,7 @@
     if (self) {
         _ID = ID.copy;
         _mediaType = mediaType;
+        _images = images;
         _tags = tags;
         _comments = comments;
         _likes = likes;
@@ -45,13 +49,17 @@
 +(Media*)buildMediaFromJSON:(NSDictionary*)JSON
 {
     // TODO: parse real json
-    return [[Media alloc] initWithID:@"fake ID"
+    
+    NSString *timestamp = JSON[@"created_time"];
+    
+    return [[Media alloc] initWithID:JSON[@"id"]
                            mediaType:MediaTypeImage
-                                tags:@[@"fake tag"]
-                            comments:@[]
+                              images:JSON[@"images"]
+                                tags:JSON[@"tags"]
+                            comments:[CommentBuilder buildCommentsFromJSONArray:JSON[@"comments"]]
                                likes:@[]
-                             caption:@"fake caption"
-                                user:nil
-                         createdTime:[NSDate date]];
+                             caption:JSON[@"caption"][@"text"]
+                                user:[UserBuilder buildUserFromJSON:JSON[@"user"]]
+                         createdTime:[NSDate dateWithTimeIntervalSince1970:timestamp.doubleValue]];
 }
 @end

@@ -14,7 +14,7 @@
 
 +(instancetype)sharedManager;
 -(void)authenticate:(void (^)(NSError*))handler;;
--(void)getFeed:     (void (^)(NSError *error, id JSON))feedHandler;
+-(void)getFeed:     (void (^)(NSError *error, NSArray *mediaItems))feedHandler;
 -(void)getProfile:  (void (^)(NSError *error, id JSON))profileHandler;
 
 

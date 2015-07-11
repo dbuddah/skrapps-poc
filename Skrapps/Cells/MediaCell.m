@@ -14,4 +14,10 @@
 
 @implementation MediaCell
 
+-(void)prepareForReuse
+{
+    self.mediaImageView.image = nil;
+    self.avatarImageView.image = nil;
+}
+
 @end

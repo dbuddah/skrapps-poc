@@ -38,6 +38,7 @@ typedef enum MediaType
 
 -(instancetype)initWithID: (NSString*)  ID
                 mediaType:(MediaType)  mediaType
+                   images:(NSArray*)images
                      tags:(NSArray*)tags
                  comments:(NSArray*)comments
                     likes:(NSArray*)likes 

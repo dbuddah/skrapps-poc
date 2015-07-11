@@ -9,12 +9,14 @@
 #import "FeedViewController.h"
 #import "InstagramServiceManager.h"
 #import "MediaCell.h"
+#import "Media.h"
+#import "AFNetworking/UIImageView+AFNetworking.h"
 
 
 @interface FeedViewController () <UIWebViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
-
+@property (strong, nonatomic) NSArray *mediaItems;
 @end
 
 @implementation FeedViewController
@@ -45,9 +47,12 @@
 -(void)refreshUserFeed
 {
     InstagramServiceManager *serviceManager = [InstagramServiceManager sharedManager];
-    [serviceManager getFeed:^(NSError *error, id JSON) {
+    [serviceManager getFeed:^(NSError *error, NSArray *mediaItems) {
         if (!error) {
-            NSLog(@"%@", JSON);
+            NSLog(@"%@", mediaItems);
+            self.mediaItems = mediaItems;
+            [self.tableview reloadData];
+            
         }
         else
             NSLog(@"%@", error);
@@ -66,7 +71,7 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return 300;
+    return self.mediaItems.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -84,10 +89,14 @@
 {
     MediaCell *mediaCell = (MediaCell*)cell;
     
-    mediaCell.timeStampLabel.text = [NSDate date].description;
-    mediaCell.usernameLabel.text = @"fake User name";
-    mediaCell.likesLabel.text = @"XX likes";
-    mediaCell.commentsLabel.text = @"XX comments";
+    Media *item = self.mediaItems[indexPath.row];
+    mediaCell.timeStampLabel.text = item.createdTime.description;
+    mediaCell.usernameLabel.text = item.user.username;
+    mediaCell.likesLabel.text = [NSString stringWithFormat:@"%lu Likes", (unsigned long)item.likes.count];
+    mediaCell.commentsLabel.text = [NSString stringWithFormat:@"%lu Comments", (unsigned long)item.comments.count];
+    
+    [mediaCell.avatarImageView setImageWithURL:[NSURL URLWithString:item.user.profilePicture]];
+    [mediaCell.mediaImageView setImageWithURL:[NSURL URLWithString:item.images[@"standard_resolution"][@"url"]]];
 }
 
 

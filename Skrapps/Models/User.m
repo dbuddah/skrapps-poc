@@ -34,9 +34,9 @@
 +(User*)buildUserFromJSON:(NSDictionary*)JSON
 {
     // TODO: parse real json
-    return [[User alloc] initWithUsername:@"fakename"
-                           profilePicture:@"fakeURL"
-                                       ID:@"FakeUSerID"
-                                 fullName:@"Fake Name"];
+    return [[User alloc] initWithUsername:JSON[@"username"]
+                           profilePicture:JSON[@"profile_picture"]
+                                       ID:JSON[@"id"]
+                                 fullName:JSON[@"full_name"]];
 }
 @end

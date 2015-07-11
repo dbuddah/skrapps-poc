@@ -10,6 +10,8 @@
 #import <AFNetworking/AFNetworking.h>
 #import "AppDelegate.h"
 
+#import "Media.h"
+
 
 static const NSString *clientID = @"6962ac9915e44af78e50aa9ead5766d6";
 static const NSString *redirectURI = @"http://fliptalkapp.com";
@@ -91,15 +93,24 @@ static const NSString *redirectURI = @"http://fliptalkapp.com";
 }
 
 
--(void)getFeed:(void (^)(NSError *, id))feedHandler
+-(void)getFeed:(void (^)(NSError *error, NSArray *mediaItems))feedHandler
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     NSDictionary *parameters = @{@"access_token": self.accessToken};
     [manager GET:@"https://api.instagram.com/v1/users/self/feed" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSArray *mediaJSON = responseObject[@"data"];
+        
+        NSMutableArray *mediaItems = [[NSMutableArray alloc] initWithCapacity:mediaJSON.count];
+        
+        for (NSDictionary *mediaItemJSON in mediaJSON) {
+            Media *mediaItem = [MediaBuilder buildMediaFromJSON:mediaItemJSON];
+            [mediaItems addObject:mediaItem];
+        }
         if (feedHandler) {
-            feedHandler(nil, responseObject);
+            feedHandler(nil, mediaItems);
         }
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

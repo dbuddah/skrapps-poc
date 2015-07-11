@@ -41,4 +41,15 @@
                                       ID:@"fakeID"
                                 fromUser:nil];
 }
+
++(NSArray*)buildCommentsFromJSONArray:(NSArray*)JSON
+{
+    NSMutableArray *comments = [NSMutableArray new];
+    for (NSDictionary *comment in JSON) {
+        Comment *c = [CommentBuilder buildCommentFromJSON:comment];
+        [comments addObject:c];
+    }
+    return [comments copy];
+}
+
 @end
