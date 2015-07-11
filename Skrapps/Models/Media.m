@@ -51,6 +51,11 @@
     // TODO: parse real json
     
     NSString *timestamp = JSON[@"created_time"];
+    NSDictionary *captionObj = JSON[@"caption"];
+    NSString *caption;
+    if ((NSNull*)captionObj != [NSNull null]) {
+        caption = captionObj[@"text"];
+    }
     
     return [[Media alloc] initWithID:JSON[@"id"]
                            mediaType:MediaTypeImage
@@ -58,7 +63,7 @@
                                 tags:JSON[@"tags"]
                             comments:[CommentBuilder buildCommentsFromJSON:JSON[@"comments"]]
                                likes:@[]
-                             caption:JSON[@"caption"][@"text"]
+                             caption:caption
                                 user:[UserBuilder buildUserFromJSON:JSON[@"user"]]
                          createdTime:[NSDate dateWithTimeIntervalSince1970:timestamp.doubleValue]];
 }
